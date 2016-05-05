@@ -100,10 +100,11 @@ public class Lexer {
                 Token token;
                 if (matcher.group(3) != null)
                     token = new NumToken(lineNo, Integer.parseInt(m));
-                else if (matcher.group(4) != null
+                else if (matcher.group(4) != null)
                     token = new StrToken(lineNom toStringLiteral(m));
                 else
-                    token = new IdToken
+                    token = new IdToken(lineNo, m);
+                queue.add(token);
             }
         }
     }
@@ -155,6 +156,16 @@ public class Lexer {
         public int getNumber(){
             return value;
         }
+    }
+
+    protected static class IdToken extends Token{
+        private String text;
+        protected IdToken(int line, String id){
+            super(line);
+            text = id;
+        }
+        public boolean isIdentifier(){ return true; }
+        public String getText(){ return text; }
     }
 
 
