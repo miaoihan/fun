@@ -1,5 +1,7 @@
 package fun;
 
+import fun.ast.ASTree;
+
 /**
  * time: 16-5-4.
  * author: han

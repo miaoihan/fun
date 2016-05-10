@@ -25,7 +25,7 @@ public class Lexer {
     //行是否读取完
     private boolean hasMore;
     private LineNumberReader reader;
-    //构造器
+    //构造器 接受单词参数
     public Lexer(Reader r){
         hasMore = true;
         reader=  new LineNumberReader(r);
@@ -83,7 +83,7 @@ public class Lexer {
             }
             else throw new ParseException("bad token at line " + lineNo, 0);
         }
-        queue.add(new IdToken(lineNo, Token.EOF));
+        queue.add(new IdToken(lineNo, Token.EOL));
     }
 
     /**
@@ -101,7 +101,7 @@ public class Lexer {
                 if (matcher.group(3) != null)
                     token = new NumToken(lineNo, Integer.parseInt(m));
                 else if (matcher.group(4) != null)
-                    token = new StrToken(lineNom toStringLiteral(m));
+                    token = new StrToken(lineNo, toStringLiteral(m));
                 else
                     token = new IdToken(lineNo, m);
                 queue.add(token);
@@ -165,7 +165,25 @@ public class Lexer {
             text = id;
         }
         public boolean isIdentifier(){ return true; }
-        public String getText(){ return text; }
+        public String getText(){ return text;}
+    }
+
+    protected static class StrToken extends Token{
+        private String literal;
+        StrToken(int line, String str){
+            super(line);
+            literal = str;
+        }
+
+        @Override
+        public boolean isString() {
+            return true;
+        }
+
+        @Override
+        public String getText() {
+            return literal;
+        }
     }
 
 
