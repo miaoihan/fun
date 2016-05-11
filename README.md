@@ -1,44 +1,19 @@
+# 一、分割单词
 
+## Token 对象
+* 单词的数据结构
+* 有标识符（Identifier）、整型量(Number)、字符串量（String）
 
-# fun
+## 正则表达式定义单词
+* 整型：[0-9]
+* 标识符：[A-Z_a-z][A-Z_a-z0-9]*
+* final: [A-Z_a-z][A-Z_a-z0-9]*|==|<=|>=|&&|\\|\\||p{Punct}
 
-基于java的一个脚本语言.
+## 借助java.util.regex 设计分析器
+* 依赖java正则库，速度比自己手动实现**性能更好**
+* Lexer类是一个词法分析器，构造函数接受一个java.io.Reader对象，根据需要逐行读取源代码
+* regexPat 保存正则表达式
+* read和peek 是两个重要方法
 
-* 语言设计.
-* 正在实现当中...
-
-
-类型目前定义了三种:
-
-* 标识符
-* 整型量
-* 字符串
-
-class Token:
-    
-    public abstract class Token {
-        public static final Token EOF = new Token(-1){};    //end of file
-        public static final String ROL = "\\n";             //end of line
-        private int lineNumber;
-        protected Token(int line){
-            lineNumber = line;
-        }
-    
-        public int getLineNumber() {
-            return lineNumber;
-        }
-        public boolean isIdentifier(){ return false; }  //标识符
-        public boolean isNumber(){ return false; }      //整型量
-        public boolean isString(){ return false; }      //字符串
-        public int getNumber(){  throw new FunException("not number token");  }
-    
-        public String getText() {
-            return "";
-        }
-    }
-    
-    
-Enjoy it!
-ok
-
+##
 
