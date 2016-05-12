@@ -35,6 +35,10 @@ public class ASTLeaf extends ASTree {
         return 0;
     }
 
+    /**
+     * 子节点，没有子节点
+     * @return
+     */
     @Override
     public Iterator<ASTree> children() {
         return empty.iterator();
