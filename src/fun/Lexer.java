@@ -24,8 +24,13 @@ public class Lexer {
     private ArrayList<Token> queue = new ArrayList<>();
     //行是否读取完
     private boolean hasMore;
+    //读取行号
     private LineNumberReader reader;
-    //构造器 接受单词参数
+
+    /**
+     * 构造器，分析输入的单词
+     * @param r 输入的单词
+     */
     public Lexer(Reader r){
         hasMore = true;
         reader=  new LineNumberReader(r);
@@ -168,8 +173,19 @@ public class Lexer {
         public String getText(){ return text;}
     }
 
+    /**
+     * 静态内部内
+     * 字符串单词token
+     */
     protected static class StrToken extends Token{
+        //字符串值
         private String literal;
+
+        /**
+         * 构造函数，生成带有行号和字符串值的token
+         * @param line 行号
+         * @param str 字符串
+         */
         StrToken(int line, String str){
             super(line);
             literal = str;
