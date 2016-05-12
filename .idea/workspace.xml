@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="363ad39f-3369-4e5e-a59a-d9ef771afa5b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fun/ast/ASTLeaf.java" afterPath="$PROJECT_DIR$/src/fun/ast/ASTLeaf.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fun/ast/ASTree.java" afterPath="$PROJECT_DIR$/src/fun/ast/ASTree.java" />
     </list>
     <ignored path="fun.iws" />
@@ -88,8 +86,8 @@
       <file leaf-file-name="ASTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fun/ast/ASTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="270">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -748,7 +746,7 @@
       <workItem from="1462886910436" duration="987000" />
       <workItem from="1462887958469" duration="4896000" />
       <workItem from="1462946306693" duration="3000" />
-      <workItem from="1463060966983" duration="3233000" />
+      <workItem from="1463060966983" duration="3539000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1462120409323</created>
@@ -827,11 +825,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463064591348</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="抽象语法树">
+      <created>1463065054714</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1463065054714</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29951000" />
+    <option name="totallyTimeSpent" value="30257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
@@ -1378,8 +1383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fun/ast/ASTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding />
         </state>
       </provider>
