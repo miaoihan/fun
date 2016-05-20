@@ -49,6 +49,10 @@ public class ASTLeaf extends ASTree {
         return "at line " + token.getLineNumber();
     }
 
+    /**
+     * 得到一个token
+     * @return token
+     */
     public Token getToken() {
         return token;
     }
