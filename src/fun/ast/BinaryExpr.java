@@ -8,7 +8,7 @@ import java.util.List;
  * @author han
  * @date 16-5-20.
  */
-public class BinaryExpr extends ASList {
+public class BinaryExpr extends ASTList {
     public BinaryExpr(List<ASTree> a) { super(a);
     }
     public ASTree left(){ return child(0); }

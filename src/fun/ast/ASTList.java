@@ -1,7 +1,5 @@
 package fun.ast;
 
-import fun.Token;
-
 import java.util.Iterator;
 import java.util.List;
 
@@ -10,7 +8,7 @@ import java.util.List;
  * @author han
  * @date  16-5-19.
  */
-public class ASList extends ASTree{
+public class ASTList extends ASTree{
     /**  保存子节点   */
     protected List<ASTree> children;
 
@@ -18,7 +16,7 @@ public class ASList extends ASTree{
      * 构造器
      * @param list astree
      */
-    public ASList(List<ASTree> list) {
+    public ASTList(List<ASTree> list) {
         children = list;
     }
 

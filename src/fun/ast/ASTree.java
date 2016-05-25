@@ -2,7 +2,7 @@ package fun.ast;
 import java.util.Iterator;
 
 /**
- *
+ * 抽象语法树
  */
 public abstract class ASTree implements Iterable<ASTree> {
     //得到第i个子节点
